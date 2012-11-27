@@ -26,7 +26,7 @@ if pwd.getpwuid(os.getuid())[0] == 'dotcloud':
     MEDIA_URL = '/media/'
 
 else:
-    envfile = 'environment.json'
+    envfile = '../environment.json'
     STATIC_ROOT = PROJECT_ROOT
     STATIC_URL = '/static/'
     STATICFILES_DIRS = (
@@ -158,7 +158,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'happyhours'
+    'happyhours',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
