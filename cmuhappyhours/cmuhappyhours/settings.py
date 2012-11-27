@@ -26,7 +26,7 @@ if pwd.getpwuid(os.getuid())[0] == 'dotcloud':
     MEDIA_URL = '/media/'
 
 else:
-    envfile = '../environment.json'
+    envfile = 'environment.json'
     STATIC_ROOT = PROJECT_ROOT
     STATIC_URL = '/static/'
     STATICFILES_DIRS = (
