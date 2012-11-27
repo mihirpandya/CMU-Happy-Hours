@@ -10,7 +10,6 @@ djcelery.setup_loader()
 settings_dir = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
 
-# os.getlogin() doesn't work for remote sessions. Not sure why. ##
 if pwd.getpwuid(os.getuid())[0] == 'dotcloud':
     envfile = '/home/dotcloud/environment.json'
     STATIC_ROOT = '/home/dotcloud/volatile/static/'
