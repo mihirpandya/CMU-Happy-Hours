@@ -16,3 +16,11 @@ body {
 	font-size: 70px;
 	color: #A52A2A;
 }
+
+#search {
+	height: 60px;
+	width: 79.5%;
+	margin-left: 10%;
+	margin-top: 7%;
+	font-size: 30px;
+}
