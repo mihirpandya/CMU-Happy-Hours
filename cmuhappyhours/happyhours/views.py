@@ -14,4 +14,8 @@ def hello_view(request):
     return HttpResponse(t.render(c))
 
 def get_timings(request):
-	return HttpResponse("Gotta write these methods, dammit!", mimetype="application/json")
+	t = loader.get_template("results.html")
+	c = Context({
+        'current_time': datetime.now(),
+    })
+	return HttpResponse(t.render(c))
