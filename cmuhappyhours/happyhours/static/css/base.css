@@ -101,3 +101,16 @@ a:hover {
 	line-height: 130%;
 	color: #F5F5DC;
 }
+
+#result {
+	padding-left: 10%;
+	padding-top: 10%;
+}
+
+table {
+	height: 100%;
+}
+
+td {
+	padding: 20px;
+}

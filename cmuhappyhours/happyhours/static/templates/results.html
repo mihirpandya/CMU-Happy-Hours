@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="static/css/base.css">
+	<body>
+		<div id="header">
+			<h1 id="header-title">
+				<a href="/">
+					CMU Happy Hours
+				</a>
+			</h1>
+		</div>
+
+		<div id="content">
+			<div id="result">
+				<table>
+					<tr>
+						<td>
+							<b>Instructor</b>
+						</td>
+						<td>
+							<b>Venue</b>
+						</td>
+						<td>
+							<b>Time</b>
+						</td>
+					</tr>
+					{% block content %}
+					{% for el in db_results %}
+					<tr>
+						<td>
+							<p>{{ el.name }}</p>
+						</td>
+						<td>
+							<p>{{ el.obj.venue }}</p>
+						</td>
+						<td>
+							<p>{{ el.obj.start_time }} <b>to</b> {{ el.obj.start_time }}</p>
+						</td>
+					</tr>
+					{% endfor %}
+					{% endblock %}
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

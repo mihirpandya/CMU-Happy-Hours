@@ -10,11 +10,12 @@ class TA(models.Model):
 	u_id = models.AutoField(primary_key=True)
 	fname = models.CharField(max_length=30)
 	lname = models.CharField(max_length=30)
-	courseNum = models.ForeignKey(Courses)
+	courseNum = models.IntegerField(max_length=10)
 
 class OfficeHours(models.Model):
 	o_id = models.AutoField(primary_key=True)
 	ta_id = models.ForeignKey(TA)
-	start_time = models.DateTimeField()
-	end_time = models.DateTimeField()
+	day = models.CharField(max_length=20)
+	start_time = models.CharField(max_length=100)
+	end_time = models.CharField(max_length=100)
 	venue = models.CharField(max_length=200)
