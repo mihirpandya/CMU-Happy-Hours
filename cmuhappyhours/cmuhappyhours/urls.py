@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from happyhours.views import hello_view
+from happyhours.views import hello_view, get_timings
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -7,6 +7,7 @@ from happyhours.views import hello_view
 
 urlpatterns = patterns('django.views.generic.simple',
 	url(r'^$', view=hello_view, name='hello_view'),
+	url(r'^get_timings', view=get_timings, name='get_timings'),
     # Examples:
     # url(r'^$', 'cmuhappyhours.views.home', name='home'),
     # url(r'^cmuhappyhours/', include('cmuhappyhours.foo.urls')),
